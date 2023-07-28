@@ -31,8 +31,8 @@ echo "******************************************"
 echo "********* Create docker img **************"
 sudo docker build -t terraform_jenkins:v2 .
 
-# Change owner
-sudo chown jenkins /var/run/docker.sock
+# Allow others rwx  
+sudo chmod o+rwx /var/run/docker.sock
 
 # Crear contenedor de Jenkins
 sudo docker run -d -it --name terraform-jenkins -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock terraform_jenkins:v2

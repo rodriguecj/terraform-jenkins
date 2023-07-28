@@ -13,12 +13,7 @@ RUN apt-get update && apt-get install -y docker-ce-cli
 
 #RUN usermod -aG docker jenkins
 
-RUN chown jenkins /var/run/docker.sock
-
 USER jenkins
 
 ## Nota:
-# Se debe crear volumen con referencia al host: /var/run/docker.sock:/var/run/docker.sock
-
-## Nota: 
 # Se debe crear volumen con referencia al host: /var/run/docker.sock:/var/run/docker.sock

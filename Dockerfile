@@ -11,7 +11,7 @@ RUN echo "deb [arch=$(dpkg --print-architecture) \
   $(cat /etc/os-release | grep VERSION_CODENAM | cut -d"=" -f2) stable" > /etc/apt/sources.list.d/docker.list
 RUN apt-get update && apt-get install -y docker-ce-cli
 
-RUN usermod -aG docker jenkins
+#RUN usermod -aG docker jenkins
 
 RUN chown jenkins /var/run/docker.sock
 

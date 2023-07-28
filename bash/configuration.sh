@@ -29,8 +29,8 @@ cd terraform-jenkins
 # Create docker img
 echo "******************************************"
 echo "********* Create docker img **************"
-sudo docker build -t terraform_jenkins .
+sudo docker build -t terraform_jenkins:v2 .
 
 # Crear contenedor de Jenkins
-sudo docker run -d -it --name terraform-jenkins -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock terraform_jenkins
+sudo docker run -d -it --name terraform-jenkins -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock terraform_jenkins:v2
 

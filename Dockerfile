@@ -18,5 +18,8 @@ USER jenkins
 # Pluging - Blue Ocean
 RUN jenkins-plugin-cli --plugins "blueocean docker-workflow"
 
+# Pluging - generic-webhook-trigger
+RUN jenkins-plugin-cli --plugins "generic-webhook-trigger:1.86.5"
+
 ## Nota:
 # Se debe crear volumen con referencia al host: /var/run/docker.sock:/var/run/docker.sock

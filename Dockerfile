@@ -3,6 +3,8 @@ FROM jenkins/jenkins:2.401.2-jdk17
 USER root
 # Docker by Jenkins 
 RUN apt-get update
+# Installing column
+RUN apt-get -y install bsdmainutils
 RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
   https://download.docker.com/linux/debian/gpg
 RUN echo "deb [arch=$(dpkg --print-architecture) \

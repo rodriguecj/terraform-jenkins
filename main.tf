@@ -15,7 +15,7 @@ provider "aws" {
 # Instancia Ec2
 resource "aws_instance" "jenkins_server" {
   ami           = "ami-053b0d53c279acc90"
-  instance_type = "t2.micro"
+  instance_type = "t2.small"
 
  subnet_id = "subnet-091e69d21f1e16768"
  associate_public_ip_address  = true

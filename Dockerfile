@@ -5,6 +5,11 @@ USER root
 RUN apt-get update
 # Installing column
 RUN apt-get -y install bsdmainutils
+
+# Installing JQ for Json
+RUN apt install -y jq
+
+# Installing Docker
 RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
   https://download.docker.com/linux/debian/gpg
 RUN echo "deb [arch=$(dpkg --print-architecture) \

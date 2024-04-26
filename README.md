@@ -1,4 +1,9 @@
-## Creation of Jenkins using Terradorm
+<div align="center">
+    <img src="docs/imgs/jenkins-terraform-aws.png" width="200">
+</div>
+
+
+<h1 align="center">Creation of Jenkins using Terradorm</h1>
 
 ### Init and download necessary plugins
 

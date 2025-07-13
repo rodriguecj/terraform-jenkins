@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.401.2-jdk17
+FROM jenkins/jenkins:2.518-jdk17
 
 USER root
 # Installing column, JQ for Json
